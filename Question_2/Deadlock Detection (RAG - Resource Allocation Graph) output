@@ -1,0 +1,13 @@
+=== Deadlock Detection (RAG) ===
+
+--- Scenario 1: No Deadlock ---
+Wait-for Graph Edges:
+P0 -> P1
+No deadlock detected. Wait-for graph is acyclic.
+
+--- Scenario 2: Deadlock (3-Process Circular Wait) ---
+Wait-for Graph Edges:
+P0 -> P1
+P1 -> P2
+P2 -> P0
+Deadlock Detected! Cycle: P0 -> P1 -> P2 -> P0 -> P0
